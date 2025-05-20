@@ -81,7 +81,7 @@ This Bash script automates the **installation**, **configuration** of a **BIND9 
 ➡️  Enter the domain name (e.g., mydomain.local): mynetwork.local
 ➡️  Enter the main hostname (e.g., dns-server): dns01
 ➡️  Enter the associated IP address (e.g., 192.168.1.10): 192.168.1.10
-📌 Adding extra records (A + PTR) in network 192.168.1.x:
+📌 Adding extra records (A + PTR) in network 192.168.1.x
 📝 [1] IP address: 192.168.1.20
 ➡️  FQDN: web.mynetwork.local
 ...
