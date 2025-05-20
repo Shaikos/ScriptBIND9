@@ -67,8 +67,12 @@ This Bash script automates the **installation**, **configuration** of a **BIND9 
 
 6. **(Optional)** Configure your system to use the new DNS server:
    - Edit `/etc/resolv.conf` or set it via your network manager
-
-
+7. **(Optional)**
+   - You can easily add hosts by running:
+     ```bash
+     sudo ./update_dns_en.sh
+     ```
+     *(or `update_dns_fr.sh` for the French version)*
 ---
 
 ## 📝 Example
