@@ -109,6 +109,11 @@ This Bash script automates the **installation**, **configuration** of a **BIND9 
 
 This script does **not** implement DNS query restrictions or zone file access control. It is intended for **local** or **testing** use only. For production environments, additional security configurations are strongly recommended (ACLs, views, logging, etc.).
 
+---
+
 ## 📜 License
 
-This script is provided without warranty. You are free to modify, improve, or integrate it into other projects.
+This project is open-source under the **MIT license**.  
+Feel free to modify, improve, and share it!
+
+---
