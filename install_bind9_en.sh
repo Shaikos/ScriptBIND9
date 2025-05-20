@@ -106,7 +106,7 @@ $LAST_OCTET   IN  PTR   $HOSTNAME.$DOMAIN.
 EOF
 
 # === Add custom A and PTR records ===
-echo "📌 Adding additional records (A + PTR) in network $SUBNET.x:"
+echo "📌 Adding additional records (A + PTR) in network $SUBNET.x"
 for i in 1 2 3; do
   read -rp "📝 [$i] IP address (leave empty to skip): " EXTRA_IP
   [ -z "$EXTRA_IP" ] && continue
