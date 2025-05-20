@@ -10,7 +10,7 @@
 ---
 ## About this script
 
-This Bash script automates the **installation**, **configuration**, and **testing** of a **BIND9 DNS server** on Debian/Ubuntu systems. It sets up forward and reverse zones, adds DNS records, checks configurations, and restarts the service. Perfect for quick deployment in local or testing environments.
+This Bash script automates the **installation**, **configuration** of a **BIND9 DNS server** on Debian/Ubuntu systems. It sets up forward and reverse zones, adds DNS records, checks configurations, and restarts the service. Perfect for quick deployment in local or testing environments.
 
 ## 📦 Features
 
@@ -20,7 +20,6 @@ This Bash script automates the **installation**, **configuration**, and **testin
 - Configuration syntax check (`named-checkconf` / `named-checkzone`)
 - BIND9 service restart and enablement
 - Hosts file update (`/etc/hosts`) with main entry
-- Quick testing with `dig`
   
 ## 📋 Requirements
 
