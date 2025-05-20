@@ -61,7 +61,6 @@ This Bash script automates the **installation**, **configuration**, and **testin
 ...
 ✅ BIND9 DNS server successfully configured!
 ```
----
 
 ## 📋 Operating System Compatibility
 
