@@ -21,8 +21,6 @@ This Bash script automates the **installation**, **configuration**, and **testin
 - Hosts file update (`/etc/hosts`) with main entry
 - Quick testing with `dig`
   
----
-
 ## 📋 Requirements
 
 - A fresh **Debian/Ubuntu** server
@@ -48,6 +46,8 @@ This Bash script automates the **installation**, **configuration**, and **testin
    - Main hostname
    - IP address
    - (Optional) Additional A and PTR records
+
+---
 
 ## 📝 Example
 
