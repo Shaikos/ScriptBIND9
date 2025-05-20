@@ -1,4 +1,15 @@
-# Automatic BIND9 Installation and Configuration Script
+# Script BIND9
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Built%20with-Bash-1f425f?style=for-the-badge">
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge">
+  <img src="https://img.shields.io/badge/GLPI-10.0.18-blue?style=for-the-badge">
+  <img src="https://img.shields.io/badge/OS-Debian%2FUbuntu-yellow?style=for-the-badge">
+  <img alt="GLPI IMG" src="https://glpi-project.org/wp-content/uploads/2022/01/assets-2.png">
+</p>
+
+---
+## About this script
 
 This Bash script automates the **installation**, **configuration**, and **testing** of a **BIND9 DNS server** on Debian/Ubuntu systems. It sets up forward and reverse zones, adds DNS records, checks configurations, and restarts the service. Perfect for quick deployment in local or testing environments.
 
@@ -11,14 +22,18 @@ This Bash script automates the **installation**, **configuration**, and **testin
 - BIND9 service restart and enablement
 - Hosts file update (`/etc/hosts`) with main entry
 - Quick testing with `dig`
+  
+---
 
-## ⚠️ Requirements
+## 📋 Requirements
 
-- Must be run as **root**
-- Debian/Ubuntu environment (APT-based)
-- Must be executed with **bash**
+- A fresh **Debian/Ubuntu** server
+- Root privileges (`sudo`)
+- Internet access
 
-## 🚀 Usage
+---
+
+## 🚀 How to Use
 
 1. Make the script executable:
    ```bash
@@ -48,12 +63,20 @@ This Bash script automates the **installation**, **configuration**, and **testin
 ...
 ✅ BIND9 DNS server successfully configured!
 ```
+---
 
-## 🔍 Automatic Checks
+## 📋 Operating System Compatibility
 
-- Configuration file syntax validation with `named-checkconf`
-- DNS zone validation with `named-checkzone`
-- Resolution test with `dig`
+| **OS**      | **Version** | **Compatibility**   |
+|-------------|-------------|---------------------|
+| **Debian**  | 10          | ⚠️ Not tested       |
+| **Debian**  | 11          | ✅ Compatible       |
+| **Debian**  | 12          | ✅ Compatible       |
+| **Ubuntu**  | 22.04       | ⚠️ Not tested       |
+| **Ubuntu**  | 24.04       | ✅ Compatible       |
+| **Ubuntu**  | 25.04       | ✅ Compatible       |
+
+---
 
 ## 📁 Files Modified/Generated
 
