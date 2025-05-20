@@ -1,77 +1,72 @@
-# Script d'installation et de configuration automatique de BIND9
+# Automatic BIND9 Installation and Configuration Script
 
-Ce script Bash permet d’installer, configurer et tester automatiquement un serveur DNS **BIND9** sur un système Linux (Debian/Ubuntu). Il crée les zones directe et inverse, ajoute les enregistrements DNS, vérifie la configuration et redémarre le service. Très utile pour un déploiement rapide dans un environnement local ou de test.
+This Bash script automates the **installation**, **configuration**, and **testing** of a **BIND9 DNS server** on Debian/Ubuntu systems. It sets up forward and reverse zones, adds DNS records, checks configurations, and restarts the service. Perfect for quick deployment in local or testing environments.
 
-## 📦 Fonctionnalités
+## 📦 Features
 
-- Installation automatique de BIND9 et des dépendances
-- Création des fichiers de zone directe et inverse
-- Ajout d'enregistrements DNS personnalisés (A et PTR)
-- Vérification de la configuration (`named-checkconf` / `named-checkzone`)
-- Redémarrage et activation du service `bind9`
-- Ajout de l’entrée principale dans `/etc/hosts`
-- Test rapide avec `dig`
+- Automatic installation of BIND9 and required dependencies
+- Creation of forward and reverse zone files
+- Addition of custom A and PTR records
+- Configuration syntax check (`named-checkconf` / `named-checkzone`)
+- BIND9 service restart and enablement
+- Hosts file update (`/etc/hosts`) with main entry
+- Quick testing with `dig`
 
-## 🧑‍💻 Auteur
+## ⚠️ Requirements
 
-- **Nom** : Shaikos  
-- **Date** : 20/05/2025
+- Must be run as **root**
+- Debian/Ubuntu environment (APT-based)
+- Must be executed with **bash**
 
-## ⚠️ Prérequis
+## 🚀 Usage
 
-- Exécution en tant que **root**
-- Environnement Debian/Ubuntu (apt)
-- Script lancé avec **bash**
-
-## 🚀 Utilisation
-
-1. Rends le script exécutable :
+1. Make the script executable:
    ```bash
    chmod +x install_bind9.sh
    ```
 
-2. Exécute le script :
+2. Run the script:
    ```bash
    sudo ./install_bind9.sh
    ```
 
-3. Réponds aux différentes questions interactives :
-   - Nom de domaine
-   - Nom d’hôte principal
-   - Adresse IP
-   - (optionnel) Ajout d’enregistrements A et PTR supplémentaires
+3. Answer the interactive prompts:
+   - Domain name
+   - Main hostname
+   - IP address
+   - (Optional) Additional A and PTR records
 
-## 📝 Exemple
+## 📝 Example
 
 ```
-➡️  Entrez le nom de domaine (ex: mondomaine.local) : monreseau.local
-➡️  Entrez le nom d'hôte principal (ex: srv-dns) : dns01
-➡️  Entrez l'adresse IP associée (ex: 192.168.1.10) : 192.168.1.10
-📌 Ajout d’enregistrements supplémentaires (A + PTR) dans le réseau 192.168.1.x :
-📝 [1] Adresse IP : 192.168.1.20
-➡️  Nom complet : web.monreseau.local
+➡️  Enter the domain name (e.g., mydomain.local): mynetwork.local
+➡️  Enter the main hostname (e.g., dns-server): dns01
+➡️  Enter the associated IP address (e.g., 192.168.1.10): 192.168.1.10
+📌 Adding extra records (A + PTR) in network 192.168.1.x:
+📝 [1] IP address: 192.168.1.20
+➡️  FQDN: web.mynetwork.local
 ...
-✅ Serveur DNS BIND9 configuré avec succès !
+✅ BIND9 DNS server successfully configured!
 ```
 
-## 🔍 Vérifications automatiques
+## 🔍 Automatic Checks
 
-- Syntaxe des fichiers de configuration avec `named-checkconf`
-- Validation des zones DNS avec `named-checkzone`
-- Test de résolution DNS avec `dig`
+- Configuration file syntax validation with `named-checkconf`
+- DNS zone validation with `named-checkzone`
+- Resolution test with `dig`
 
-## 📁 Fichiers modifiés/générés
+## 📁 Files Modified/Generated
 
-- `/etc/bind/named.conf.options` (sauvegarde faite)
-- `/etc/bind/named.conf.local` (sauvegarde faite)
-- `/etc/bind/db.nomdomaine`
-- `/etc/bind/db.zoneinverse`
-- `/etc/hosts` (ajout si nécessaire)
+- `/etc/bind/named.conf.options` (backup created)
+- `/etc/bind/named.conf.local` (backup created)
+- `/etc/bind/db.domain`
+- `/etc/bind/db.reversezone`
+- `/etc/hosts` (entry added if needed)
 
-## 🔐 Sécurité
+## 🔐 Security
 
-Ce script ne configure pas de restrictions sur les requêtes DNS ou sur l'accès aux fichiers de zone. Il est conçu pour un usage **local** ou **en environnement de test**. Pour une mise en production, des ajustements supplémentaires sont nécessaires (ACL, vues, journalisation, etc.).
+This script does **not** implement DNS query restrictions or zone file access control. It is intended for **local** or **testing** use only. For production environments, additional security configurations are strongly recommended (ACLs, views, logging, etc.).
 
-## 📜 Licence
+## 📜 License
 
-Ce script est distribué sans garantie. Tu peux le modifier, l'améliorer ou l'intégrer dans d'autres projets.
+This script is provided without warranty. You are free to modify, improve, or integrate it into other projects.
