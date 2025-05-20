@@ -31,21 +31,43 @@ This Bash script automates the **installation**, **configuration** of a **BIND9 
 
 ## 🚀 How to Use
 
-1. Make the script executable:
+1. **Clone the repository:**
+
    ```bash
-   chmod +x install_bind9.sh
+   git clone https://github.com/Shaikos/ScriptBIND9.git
+   cd ScriptBIND9
    ```
 
-2. Run the script:
+2. **Make the scripts executable:**
+
    ```bash
-   sudo ./install_bind9.sh
+   chmod +x install_bind9_en.sh 
    ```
 
-3. Answer the interactive prompts:
-   - Domain name
-   - Main hostname
-   - IP address
-   - (Optional) Additional A and PTR records
+3. **Run the script as root:**
+
+   ```bash
+   sudo ./install_bind9_en.sh
+   ```
+   *(or `install_bind9_fr.sh` for the French version)*
+
+4. **Follow the prompts:**
+   - Enter the **domain name** (e.g., `example.local`)
+   - Enter the **main hostname** (e.g., `ns1`)
+   - Enter the **IP address** of the DNS server
+   - *(Optional)* Add additional **A** and **PTR** records
+
+5. **Verify the installation:**
+   - Use `dig` or `nslookup` to test DNS resolution
+   - Check BIND9 status:
+
+     ```bash
+     sudo systemctl status bind9
+     ```
+
+6. **(Optional)** Configure your system to use the new DNS server:
+   - Edit `/etc/resolv.conf` or set it via your network manager
+
 
 ---
 
