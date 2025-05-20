@@ -134,7 +134,7 @@ named-checkzone "$REVERSE_ZONE" "$REVERSE_ZONE_FILE" || { echo "❌ Erreur dans 
 
 # === Redémarrage et activation de BIND9 ===
 systemctl restart bind9
-systemctl enable bind9
+systemctl preset bind9
 
 # === Ajout automatique à /etc/hosts ===
 FQDN="$HOSTNAME.$DOMAIN"
